@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -10,7 +12,7 @@ var users = require('./routes/users');
 var search = require('./routes/search')
 
 var app = express();
-require('dotenv').config();
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
