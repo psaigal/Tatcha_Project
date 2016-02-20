@@ -5,14 +5,24 @@ var AmazonAPI = require('amz-products');
 
 
 router.post('/', function (req, res) {
-  var client = amazon.createClient({
+  var data = req.body //data: formData
+  var searchTerm = data.searchTerm //userInput
+  res.send("HELLO WORLD");
+  var amazon = new AmazonAPI({
     awsId: process.env.AccessID,
     awsSecret: process.env.SecretKey,
     awsTag: process.env.AssociateTag
   });
-  var data = req.body //data: formData
-  var searchTerm = data.searchTerm
-  res.send(searchTerm);
+
+
+ amazon.getItemsInBrowseNode({
+    'SearchIndex': 'All',
+    'Keywords': searchTerm
+  }, function(err, res){
+      console.log(res)
+  });
 });
+
+
 
 module.exports = router;
