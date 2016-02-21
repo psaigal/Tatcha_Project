@@ -20,21 +20,31 @@ block content
 
   .jumbotron
     .container
-      h1 Hello, world!
+      img(src='#{indexResults[1].LargeImage[0].URL[0]}')
+
       p
         | This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
       p
-        a.btn.btn-primary.btn-lg(role='button') Learn more &raquo;
-  .container
-
-
-
+        a.btn.btn-primary.btn-lg(role='button', id='downClick') Shop Now &raquo;
 
   .container
-    form.form-signin(action="/login", method="post")
+
+
+
+
+
+  .container
+    form.form-signin(action="/search", method="post")
       h2.form-signin-heading Search Products
       input.input-block-level(type="text", name="title", id="product_name")
       button.btn.btn-large.btn-primary(type="submit",id="submit", value="Search") Search
+
+
+  .row
+    .col-md-4.col-sm-6.col-xs-12
+    .col-md-4.col-sm-6.col-xs-12
+    .col-md-4.col-sm-6.col-xs-12
+
 
 
 
