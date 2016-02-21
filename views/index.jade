@@ -1,14 +1,66 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.navbar.navbar-fixed-top
+    div.navbar-inner
+        div.container
+            a(data-toggle='collapse',data-target='.nav-collapse').btn.btn-navbar
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a(href='#').brand #{title}
+            div.nav-collapse
+                ul.nav
+                    li.active
+                        a(href='#') Home
+                    li
+                        a(href='#') Bestsellers
+                    li
+                        a(href='#') Contact
+
+  .jumbotron
+    .container
+      h1 Hello, world!
+      p
+        | This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
+      p
+        a.btn.btn-primary.btn-lg(role='button') Learn more &raquo;
+  .container
+
+
+
+
+  .container
+    form.form-signin(action="/login", method="post")
+      h2.form-signin-heading Search Products
+      input.input-block-level(type="text", name="title", id="product_name")
+      button.btn.btn-large.btn-primary(type="submit",id="submit", value="Search") Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   #container.col
 
-  form(action="/search", method="post")
-        div.input
-            span.label Product Name
-            input(type="text", name="title", id="product_name")
-        div.actions
-            input(type="submit", id="submit", value="Search")
+
+
+
 
