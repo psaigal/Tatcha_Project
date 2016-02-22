@@ -30,10 +30,10 @@ $( document ).ready(function() {
           product.className = "col-md-4";
           var img = document.createElement("img");
           img.src = response[i].MediumImage[0].URL[0];
-          img.id = "product-image"
+          img.className = "product-image"
           var a = document.createElement('a');
-          a.href = response[i].DetailPageURL[0];
-          a.id = "product-link"
+          a.src = response[i].DetailPageURL[0];
+          a.className = "product-link"
           var linkText = document.createTextNode("Shop on Amazon");
           a.appendChild(linkText);
           a.title = "Shop on Amazon";
