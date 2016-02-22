@@ -38,6 +38,7 @@ $( document ).ready(function() {
           a.appendChild(linkText);
           a.title = "Shop on Amazon";
           $(product).append("<p id='product-description'>" + response[i].ItemAttributes[0].Title[0] + "</p>");
+          $(product).append("<div class='line_break'></div>");
           $(product).append(img);
           $(product).append("<br>")
           $(product).append(a);
