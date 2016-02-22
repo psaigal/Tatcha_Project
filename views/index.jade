@@ -27,23 +27,17 @@ block content
       p
         a.btn.btn-primary.btn-lg(role='button', id='downClick') Shop Now &raquo;
 
-  .container
+    .container
 
 
 
 
+  form.form-signin(action="/search", method="post")
+    h2.form-signin-heading Search Products
+    input.input-block-level(type="text", name="title", id="product_name")
+    button.btn.btn-large.btn-primary(type="submit",id="submit", value="Search") Search
 
-  .container
-    form.form-signin(action="/search", method="post")
-      h2.form-signin-heading Search Products
-      input.input-block-level(type="text", name="title", id="product_name")
-      button.btn.btn-large.btn-primary(type="submit",id="submit", value="Search") Search
-
-
-  .row
-    .col-md-4.col-sm-6.col-xs-12
-    .col-md-4.col-sm-6.col-xs-12
-    .col-md-4.col-sm-6.col-xs-12
+  .container-fluid
 
 
 
@@ -68,7 +62,6 @@ block content
 
 
 
-  #container.col
 
 
 
