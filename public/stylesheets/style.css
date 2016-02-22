@@ -1,7 +1,7 @@
 /**{
   outline: 1px solid red;
-}*/
-
+}
+*/
 html, body {
   height: 100%;
   width: 100%;
@@ -112,7 +112,7 @@ p {
 
 .col-md-4 {
   padding: 15px;
-  width: 1000px;
+  width: 500px;
   margin: 0 auto;
   border: 0.5px solid #ccc;
   border-radius: 10px;
@@ -124,18 +124,16 @@ p {
 }
 
 .product-image {
-  margin-left: 40%;
+  margin-left: 35%;
 }
 
 #product-description {
   font-family: 'Work Sans', sans-serif;
   font-size: 20px;
-  font-weight: 200px;
-  color: white;
+  font-weight: 300;
   padding: 15px;
-  background-color: #8680ba;
+  color:#410096;
   border-radius: 15px;
-  opacity: 0.8;
 }
 
 #heading-description {
@@ -144,7 +142,7 @@ p {
 
 .product-link {
   display: none;
-  margin-left: 40%;
+  margin-left: 28%;
 }
 
 .btn-custom {
@@ -164,8 +162,8 @@ p {
 }
 
 .line_break {
-  background-color:#cccccc;
-  height: 2px;
+  background-color:#410096;
+  height: 1px;
   width: 100%;
   margin-bottom: 15px;
 }
