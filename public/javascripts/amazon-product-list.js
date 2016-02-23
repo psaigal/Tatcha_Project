@@ -27,14 +27,15 @@ $( document ).ready(function() {
           var a = document.createElement('a');
           a.href = response[i].DetailPageURL[0];
           amazon_img.className = "product-link"
-          amazon_img.onclick = function() {
-              window.location.href = a.href;
-          };
+          // amazon_img.onclick = function() {
+          //     window.location.href = a.href;
+          // };
+          a.appendChild(amazon_img)
           $(product).append("<p id='product-description'>" + response[i].ItemAttributes[0].Title[0] + "</p>");
           $(product).append("<div class='line_break'></div>");
           $(product).append(product_img);
           $(product).append("<br>")
-          $(product).append(amazon_img);
+          $(product).append(a);
           $('.container-fluid').append(product);
         };
         while(($children = $(':not(.row)>.col-md-4:lt(2)')).length) {
