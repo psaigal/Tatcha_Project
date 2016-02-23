@@ -1,6 +1,6 @@
 $( document ).ready(function() {
     $('#submit').click(function(event) {
-      // document.getElementsByClassName("#this-carousel-id")[0].style.display = "none";
+      document.getElementById("this-carousel-id").style.display = "none";
       var userInput = $('#product_name').val();
       var formData = {searchTerm: userInput};
 
@@ -13,10 +13,10 @@ $( document ).ready(function() {
 
       request.done(function(response){
         console.log(new Date())
-        // console.log(JSON.stringify(response))
+        console.log(response)
         $(".container-fluid").html("");
         var counter = 1
-        for (var i = 0; i < 5; i++){
+        for (var i = 0; i < response.length; i++){
           var product = document.createElement("div");
           product.className = "col-md-4";
           var product_img = document.createElement("img");

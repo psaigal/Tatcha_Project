@@ -77,7 +77,7 @@ p {
   line-height: 1;
   font-weight: 300;
   color: #410096;
-  margin-top: 6%;
+  margin-top: 8%;
   text-align:center;
 }
 
@@ -164,8 +164,8 @@ p {
   padding: 12px;
   font-size: 18px;
   box-shadow: 8px 8px 3px #888888;
-  margin-top: 18px;
 }
+
 
 #submit {
   margin-left: 40%;
@@ -192,13 +192,7 @@ p {
   height:600px;
 
 }
-/*
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1%;
-}*/
+
 
 
 .item img {
@@ -206,6 +200,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   margin-top: 1%;
+  margin-bottom: 5%;
 
 }
 
@@ -214,6 +209,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   margin-top: 1%;
+  margin-bottom: 5%;
 
 }
 
