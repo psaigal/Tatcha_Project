@@ -1,7 +1,7 @@
 /**{
   outline: 1px solid red;
-}
-*/
+}*/
+
 html, body {
   height: 100%;
   width: 100%;
@@ -12,6 +12,12 @@ html, body {
 a {
   color: #410096;
   margin: 0 auto;
+}
+
+a:hover {
+  color: #8680ba;
+  margin: 0 auto;
+  text-decoration: none;
 }
 
 p {
@@ -35,8 +41,10 @@ p {
 .text-vcenter h1 {
   font-size: 4.5em;
   font-weight: 700;
-  margin: 0;
-  padding: 0;
+  /*margin: 0 auto;
+  padding: 0;*/
+  margin-top: 500px;
+  text-align: center;
 }
 
 /* additional sections */
@@ -69,6 +77,8 @@ p {
   line-height: 1;
   font-weight: 300;
   color: #410096;
+  margin-top: 6%;
+  text-align:center;
 }
 
 .jumbotron .btn {
@@ -124,7 +134,9 @@ p {
 }
 
 .product-image {
-  margin-left: 35%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #product-description {
@@ -176,3 +188,37 @@ p {
      display: block;
 }
 
+.item {
+  height:600px;
+
+}
+/*
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+}*/
+
+
+.item img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+
+}
+
+.item.active img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+
+}
+
+#this-carousel-id {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+}

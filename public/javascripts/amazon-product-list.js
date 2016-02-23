@@ -1,6 +1,6 @@
 $( document ).ready(function() {
     $('#submit').click(function(event) {
-      document.getElementsByClassName("home")[0].style.display = "none";
+      // document.getElementsByClassName("#this-carousel-id")[0].style.display = "none";
       var userInput = $('#product_name').val();
       var formData = {searchTerm: userInput};
 
@@ -12,10 +12,11 @@ $( document ).ready(function() {
       });
 
       request.done(function(response){
+        console.log(new Date())
         // console.log(JSON.stringify(response))
         $(".container-fluid").html("");
         var counter = 1
-        for (var i = 0; i < response.length; i++){
+        for (var i = 0; i < 5; i++){
           var product = document.createElement("div");
           product.className = "col-md-4";
           var product_img = document.createElement("img");
@@ -25,10 +26,9 @@ $( document ).ready(function() {
           amazon_img.src = '/Amazon-Button.png';
           var a = document.createElement('a');
           a.href = response[i].DetailPageURL[0];
-          console.log(a)
           amazon_img.className = "product-link"
           amazon_img.onclick = function() {
-              window.location.href = a;
+              window.location.href = a.href;
           };
           $(product).append("<p id='product-description'>" + response[i].ItemAttributes[0].Title[0] + "</p>");
           $(product).append("<div class='line_break'></div>");
@@ -46,18 +46,30 @@ $( document ).ready(function() {
         );
         }
       });
+   console.log(new Date())
     });
+  var searchHeight = 614; //pixel top offset of search bar
+  $('.downClick').on('click', function(event) {
+    var target = $('.downClick');
 
-  $('#downClick').on('click', function(event) {
-    var target = $('#downClick');
+    console.log(target.offset().top +100," target object: ",target);
     if( target.length ) {
         event.preventDefault();
+        var vertical = searchHeight - target.offset().top;
         $('html, body').animate({
-            scrollTop: target.offset().top + 100
+            scrollTop: target.offset().top + vertical
         }, 500);
     }
   });
-  });
+
+
+
+    $('.carousel').carousel({
+      // interval: 2000
+    });
+
+
+});
 
 
 

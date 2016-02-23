@@ -18,13 +18,29 @@ block content
                     li
                         a(href='/') Contact
 
+   #this-carousel-id.carousel.slide
 
-  div.home#home
-    div.text-vcenter
-      h1#header Check out the latest brands
-      img(src='#{indexResults[1].LargeImage[0].URL[0]}')
-      p
-        a.btn-custom(role='button', id='downClick') Shop Now &raquo;
+      .carousel-inner
+        .item.active
+
+          h1#header Check out the latest brands
+          img(src='#{indexResults[1].LargeImage[0].URL[0]}')
+          p
+            a.btn-custom(role='button', class='downClick') Shop Now &raquo;
+        .item
+          h1#header Check out the latest brands
+          img(src='#{indexResults[3].LargeImage[0].URL[0]}')
+          p
+            a.btn-custom(role='button', class='downClick') Shop Now &raquo;
+      a.carousel-control.left(href='#this-carousel-id', data-slide='prev') ‹
+      a.carousel-control.right(href='#this-carousel-id', data-slide='next') ›
+
+
+
+
+
+
+
 
 
   form.form-signin(action="/search", method="post")
