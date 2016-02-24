@@ -20,7 +20,7 @@ router.get('/', function(req, res, next) {
         console.log(err);
       }
       else {
-        res.render('index', { title: 'Tatcha Coding Challenge', indexResults: results});
+        res.render('index', { title: 'SearchIt', indexResults: results});
       }
     });
   });
