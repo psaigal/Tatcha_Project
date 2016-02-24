@@ -14,7 +14,7 @@ router.post('/', function (req, res) {
     awsTag: process.env.AssociateTag
   });
 
-  var x = client.itemSearch({
+  var getProducts = client.itemSearch({
   searchIndex: 'All',
   keywords: searchTerm,
   responseGroup: 'ItemAttributes,Offers,Images'
@@ -22,7 +22,7 @@ router.post('/', function (req, res) {
     if (err) {
       console.log(err);
     } else {
-      res.send(results);  // products
+      res.send(results);
     }
   });
 });

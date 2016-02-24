@@ -59,7 +59,7 @@ var amazonProductsResponse = function(response) {
     $(product).append(amazonLink);
     $(".container-fluid").append(product);
   };
-   while(($children = $(':not(.row)>.col-xs-6:lt(2)')).length) {
+  while(($children = $(':not(.row)>.col-xs-6:lt(2)')).length) {
     $children
     .parent()
     .append(

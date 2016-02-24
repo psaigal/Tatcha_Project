@@ -11,21 +11,19 @@ router.get('/', function(req, res, next) {
     awsTag: process.env.AssociateTag
   });
 
-  var y = client.itemSearch({
+  var getfrontPageImages = client.itemSearch({
     searchIndex: 'All',
     keywords: "Tatcha",
     responseGroup: 'ItemAttributes, Images'
     }, function(err, results, response) {
-    if (err) {
-      console.log(err);
-    } else {
-      res.render('index', { title: 'Tatcha Coding Challenge', indexResults: results});
-
-    }
+      if (err) {
+        console.log(err);
+      }
+      else {
+        res.render('index', { title: 'Tatcha Coding Challenge', indexResults: results});
+      }
+    });
   });
-
-
-});
 
 
 
