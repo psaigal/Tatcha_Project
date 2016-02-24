@@ -24,29 +24,6 @@ p {
   text-align: center;
 }
 
-/* padded section */
-.pad-section {
-  padding: 50px 0;
-}
-/*.pad-section img {
-  width: 100%;
-}*/
-
-/* vertical-centered text */
-.text-vcenter {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-}
-.text-vcenter h1 {
-  font-size: 4.5em;
-  font-weight: 700;
-  /*margin: 0 auto;
-  padding: 0;*/
-  margin-top: 500px;
-  text-align: center;
-}
-
 /* additional sections */
 #home {
   display: table;
@@ -59,16 +36,9 @@ p {
   background-size: cover;
 }
 
-
 #container {
   height: 500px;
   width: 500px;
-}
-
-
-.jumbotron {
-  margin: 60px 0;
-  text-align: center;
 }
 
 #header {
@@ -79,12 +49,6 @@ p {
   color: #410096;
   margin-top: 8%;
   text-align:center;
-}
-
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
-  margin-top: 10px;
 }
 
 .form-signin-heading {
@@ -112,7 +76,6 @@ p {
   color:gray;
   font-weight: 300;
 }
-
 
 .container-fluid {
   margin-top: 30px;
@@ -152,7 +115,7 @@ p {
   text-align: center;
 }
 
-.product-link {
+.amazon-product-link {
   display: none;
   margin-left: 28%;
 }
@@ -166,7 +129,6 @@ p {
   box-shadow: 8px 8px 3px #888888;
   font-weight: 300;
 }
-
 
 #submit {
   margin-left: 40%;
@@ -182,19 +144,16 @@ p {
 }
 
 .col-md-4:hover .product-image{
-     opacity: 0.2;
+  opacity: 0.2;
 }
 
-.col-md-4:hover .product-link{
-     display: block;
+.col-md-4:hover .amazon-product-link{
+  display: block;
 }
 
 .item {
   height:600px;
-
 }
-
-
 
 .item img {
   display: block;
@@ -202,7 +161,6 @@ p {
   margin-right: auto;
   margin-top: 1%;
   margin-bottom: 5%;
-
 }
 
 .item.active img {
@@ -211,7 +169,6 @@ p {
   margin-right: auto;
   margin-top: 1%;
   margin-bottom: 5%;
-
 }
 
 #this-carousel-id {
