@@ -1,5 +1,7 @@
-# Tatcha_Project--SearchIt
+# Tatcha_Project- SearchIt
 ## Search for your favorite products
+
+View a demo at: http://searchit.herokuapp.com/
 
 SearchIt is a web application that uses the Amazon Product Advertising API to allow users to search for their favorite products and purchase them on Amazon. 
 
@@ -11,14 +13,16 @@ Technologies Used:
   * AJAX
   * Jade
   
-##To run this application:
+## To run this application:
 
-*npm install
-*nodemon
+First clone the repository and then:
+
+* npm install 
+* nodemon
 
 To view the full application, type the following into your browser: http://localhost:3000.
 
-##Contribution
+## Contribution
 
 If you are interested in contributing to this project, please fork and clone the repository.
   
