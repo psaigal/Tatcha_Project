@@ -1,8 +1,6 @@
 $( document ).ready(function() {
   productSearch();
 
-  // scrollDown();
-
   $(".carousel").carousel({
     interval: 2000
   });
@@ -39,23 +37,26 @@ var amazonProductsResponse = function(response) {
   for (var i = 0; i < response.length; i++){
     var product = document.createElement("div");
     product.className = "col-xs-6";
-    var product_img = document.createElement("img");
-    product_img.src = response[i].MediumImage[0].URL[0];
-    product_img.className = "product-image";
-    var amazon_img = new Image();
-    amazon_img.src = "/Amazon-Button.png";
-    amazon_img.className = "amazon-product-link";
-    var a = document.createElement('a');
-    a.href = response[i].DetailPageURL[0];
-    a.appendChild(amazon_img)
+    var productImg = document.createElement("img");
+    productImg.src = response[i].MediumImage[0].URL[0];
+    productImg.className = "product-image";
+    var productImgContainer = document.createElement("div");
+    productImgContainer.id = "product-image-container";
+    productImgContainer.appendChild(productImg);
+    var amazonImg = document.createElement("img");
+    amazonImg.src = "/Amazon-Button.png";
+    amazonImg.className = "amazon-product-link";
+    var amazonLink = document.createElement('a');
+    amazonLink.href = response[i].DetailPageURL[0];
+    amazonLink.appendChild(amazonImg)
     var price = response[i].OfferSummary[0].LowestNewPrice[0].FormattedPrice[0];
     $(product).append("<p id='product-description'>" + response[i].ItemAttributes[0].Title[0] + "</p>");
+    $(product).append("<div class='line_break'></div>");
     $(product).append("<br>");
-    // $(product).append("<div class='line_break'></div>");
-    $(product).append(product_img);
+    $(product).append(productImgContainer);
     $(product).append("<br>");
     $(product).append("<p>" + price + "</p>");
-    $(product).append(a);
+    $(product).append(amazonLink);
     $(".container-fluid").append(product);
   };
    while(($children = $(':not(.row)>.col-xs-6:lt(2)')).length) {
@@ -68,17 +69,3 @@ var amazonProductsResponse = function(response) {
   }
 };
 
-
-// var scrollDown = function() {
-//   var searchHeight = 614; //pixel top offset of search bar
-//   $(".downClick").on("click", function(event) {
-//     var target = $(".downClick");
-//     if( target.length ) {
-//       event.preventDefault();
-//       var vertical = searchHeight - target.offset().top;
-//       $("html, body").animate({
-//           scrollTop: target.offset().top + vertical
-//       }, 500);
-//     }
-//   });
-// };
