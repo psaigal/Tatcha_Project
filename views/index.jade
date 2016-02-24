@@ -1,22 +1,31 @@
 extends layout
 
 block content
-  div.navbar.navbar-fixed-top
-    div.navbar-inner
-        div.container
-            a(data-toggle='collapse',data-target='.nav-collapse').btn.btn-navbar
-                span.icon-bar
-                span.icon-bar
-                span.icon-bar
-            a(href='#').brand #{title}
-            div.nav-collapse
-                ul.nav
-                    li.active
-                        a(href='/') Home
-                    li
-                        a(href='/') Bestsellers
-                    li
-                        a(href='/') Contact
+  .navbar.navbar-fixed-top
+    .navbar-inner
+      .container
+        a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.brand(href='#')
+        .nav-collapse
+          ul.nav
+            li.active
+              a(href='/') Home
+            li
+              a(href='/') Bestsellers
+            li
+              a(href='/') Contact
+            .col-sm-3.col-md-3.pull-right
+              form.navbar-form(role='search')
+                .input-group
+                  input#product_name.input-block-level(type='text', placeholder='Search Products', name='title')
+                  button#submit.btn.btn-default(type='submit', value='Search')
+                    i.glyphicon.glyphicon-search
+
+
+
 
    #this-carousel-id.carousel.slide
 
@@ -26,51 +35,17 @@ block content
           h1#header Check out the latest brands
           img(src='#{indexResults[1].LargeImage[0].URL[0]}')
           p
-            a.btn-custom(role='button', class='downClick') Shop Now &raquo;
+            a.btn-custom(role='button', href='#{indexResults[1].DetailPageURL[0]}') Shop Now &raquo;
         .item
           h1#header Get the best deals
           img(src='#{indexResults[2].LargeImage[0].URL[0]}')
           p
-            a.btn-custom(role='button', class='downClick') Shop Now &raquo;
+            a.btn-custom(role='button', href='#{indexResults[2].DetailPageURL[0]}') Shop Now &raquo;
       a.carousel-control.left(href='#this-carousel-id', data-slide='prev') ‹
       a.carousel-control.right(href='#this-carousel-id', data-slide='next') ›
 
 
-  form.form-signin(action="/search", method="post")
-    h2.form-signin-heading Search Products
-    input.input-block-level(type="text", name="title", id="product_name")
-    span.glyphicon.glyphicon-search
-    button.btn-custom(type="submit", id="submit", value="Search") Search
-
   .container-fluid
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

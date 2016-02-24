@@ -14,14 +14,11 @@ router.get('/', function(req, res, next) {
   var y = client.itemSearch({
     searchIndex: 'All',
     keywords: "Tatcha",
-    responseGroup: 'ItemAttributes,Offers,Images'
+    responseGroup: 'ItemAttributes, Images'
     }, function(err, results, response) {
     if (err) {
       console.log(err);
     } else {
-      // console.log(results[3].MediumImage[0].URL[0])
-      // console.log(JSON.stringify(results));  // products
-      // console.log(response); // response (containing TotalPages, TotalResults, MoreSearchResultsUrl and so on)
       res.render('index', { title: 'Tatcha Coding Challenge', indexResults: results});
 
     }

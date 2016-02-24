@@ -23,7 +23,6 @@ router.post('/', function (req, res) {
       console.log(err);
     } else {
       res.send(results);  // products
-      // console.log(response); // response (containing TotalPages, TotalResults, MoreSearchResultsUrl and so on)
     }
   });
 });
